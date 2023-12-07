@@ -5,6 +5,9 @@ from langchain.embeddings import HuggingFaceInstructEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 import os
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer("hkunlp/instructor-large")
 
 from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env (especially openai api key)
